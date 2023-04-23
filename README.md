@@ -1,5 +1,5 @@
 # carboncheck
-![] https://media.discordapp.net/attachments/407710496670875661/1099663538009677904/image.png
+![] (https://media.discordapp.net/attachments/407710496670875661/1099663538009677904/image.png)
 ## Inspiration
 A lot of people know of carbon emissions and greenhouse gases but don't know if they have a bad carbon footprint and how to even improve it. This inspired me to create CarbonCheck. 
 ## What it does
