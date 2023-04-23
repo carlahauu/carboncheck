@@ -1,0 +1,57 @@
+{% extends "base/main.html" %}
+{% block content %}
+
+
+<body>
+  <br><br><br><br><br><br>
+
+<h1 style="text-align: center; font-size: 40px;">AI Calculator</h1>
+<p style="text-align: center; font-size: 20px;">Please answer the following questions! We will do our best to evaluate your carbon footprint and provide suggestions</p>
+<br>
+<form class="ai-form"method="post">
+  {% csrf_token %}
+  <div class="questions">
+  <p class="causes" style="text-align: center;">How often do you travel by car or other personal vehicle?</p>
+  <select class="cars">
+    <option>Daily</option>
+    <option>2-3 times a week</option>
+    <option>Monthly</option>
+    <option>Rarely / Never</option>
+  </select>
+  <p class="causes" style="text-align: center;">How often do you eat meat or dairy products?</p>
+  <select class="food">
+    <option>Daily</option>
+    <option>2-3 times a week</option>
+    <option>Monthly</option>
+    <option>Rarely / Never</option>
+  </select>
+  <p class="causes" style="text-align: center;">How often do you use single-use plastics, such as straws or water bottles?</p>
+  <select class="plastics">
+    <option>Daily</option>
+    <option>2-3 times a week</option>
+    <option>Monthly</option>
+    <option>Rarely / Never</option>
+  </select>
+  <p class="causes" style="text-align: center;">Do you have solar panels or use renewable energy in your home?</p>
+  <select class="energy">
+    <option>I do</option>
+    <option>I don't</option>
+  </select>
+  <p class="causes" style="text-align: center;">How often do you fly on airplanes or take other long-distance trips?</p>
+  <select class="planes">
+    <option>Daily</option>
+    <option>2-3 times a week</option>
+    <option>Monthly</option>
+    <option>Annually</option>
+    <option>Rarely / Never</option>
+  </select>
+  <br><br>
+  <button class="more" type="submit">Evaluate!</button>
+</form><br><br>
+</div>
+<h1 style="text-align: center; font-size: 40px;">Evaluation Time!</h1>
+  <p style="text-align: center; font-size: 20px;">Based on the information we received, we generated this response:</p>
+<p style="text-align: center; font-size: 20px;">{{response | safe}}</p>
+</body>
+<br><br><br>
+{% endblock content %}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-COMPAITABLE" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content=""> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <style>
+
+        .container{
+          margin-left: 150px;
+        }
+
+        .subhead{
+          
+            padding-top: 1em;
+            color:rgb(41, 41, 41);
+            font-size: 60px;
+            line-height: 65px;
+            max-width: 800px;
+        }
+
+        span{
+            color: #5DB570;
+            text-decoration: none;
+        }
+
+        body{
+            background: #ffffff;
+            margin: 0;
+            font-family: 'Inter';
+        }
+
+        .navbar{
+            background: #5DB570;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+        }
+
+        .logo{
+          font-weight: bold;
+          text-decoration: none;
+            color: #ffffff;
+            font-size: 25px;
+            margin-left: 250px;
+        }
+
+        nav{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .primary-cta{
+            background:#7a7a7a;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 30px;
+            border-radius: 10px;
+            margin-right: 1em;
+        }
+
+        .causes{
+          margin-left: 270px;
+          font-size: 20px;
+          max-width: 1500px;
+        }
+
+        h3{
+          color: rgb(246, 255, 248);
+          font-size: 30px;
+        }
+
+        h1{
+            color: #5DB570;
+            text-decoration: none;
+        }
+
+        h2{
+          padding-top: 30px;
+          text-align: center;
+        }
+
+        .more{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            border-radius: 10px;
+            background: #5DB570;
+            justify-content: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 200px;
+            padding-right: 200px;
+            margin-left: 710px;
+            max-width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mission-cta{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 30px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 10px;
+            background: #5DB570;
+        }
+
+        .why{
+            padding-left: 8em;
+            color: #FFE44C;
+            padding-right: 8em;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            padding-left: 10em;
+        }
+
+
+        li {
+            float: left;
+            padding-right: 6em;
+            font-size: large; 
+        }
+
+        li a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        section{
+            padding: 5em 8em; 
+        }
+
+        .hero{
+            display: flex;
+        }
+
+        .hero-img{
+          
+          display: inline-flexbox;
+          padding-left: 100px;
+          margin-left: 1000px;
+          margin-top: 70px;
+          position: absolute;
+        }
+
+        .what{
+            padding: 40px;
+            text-align: center;
+            color: rgb(226, 255, 236);
+            background: #5DB570;
+            font-size: 25px;
+            padding-left: 6em;
+            padding-right: 6em;
+        }
+
+        footer{
+            text-align: center;
+            background-color: #5DB570;
+            padding: 10px;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        select{
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          background-color: #dbdbdb;
+          border: none;
+          font-size: 20px;
+          padding: 5px;
+          text-align: center;
+        }
+
+        .ai-form button{
+          display: flex;
+            margin: auto;
+            justify-content: center;
+        } 
+
+        .ai-form textarea{
+          display: flex;
+            margin: auto;
+            justify-content: center;
+        } 
+
+    </style>
+    <body>
+        <div class="navbar">
+            <a class="logo" href="{% url 'home' %}">CarbonCheck</a>
+            <nav>
+                <ul>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'causes' %}">Causes</a></li>
+                    <li><a href="{% url 'calculator' %}">AI Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </body>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer>Designed and developed by Carla Hau. ClimateHacks Submission</footer>
+</html>
